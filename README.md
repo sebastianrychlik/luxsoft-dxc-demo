@@ -96,6 +96,7 @@ backend/
 │           └── LuxsoftDxcDemoApplicationTests.java
 └── pom.xml
 ```
+<!-- TODO: Describe how to set up and run the project locally (prerequisites, env vars, scripts). -->
 
 ## Deployment
 
