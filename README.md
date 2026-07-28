@@ -137,10 +137,13 @@ npm install
 
 ```bash
 cd frontend
-npx ng serve
+npm start
 ```
 
 Application starts at: `http://localhost:4200`
+
+The Angular development proxy routes `/api/*` → `http://localhost:8080` automatically.
+Start the backend before the frontend.
 
 #### Build
 
@@ -162,6 +165,8 @@ frontend/src/app/
 See `docs/commands/02-angular.md` for full command reference.
 
 See `docs/development/milestones/M1.0-angular-foundation.md` for architecture details.
+
+See `docs/development/milestones/M1.1-frontend-backend-integration.md` for integration details.
 
 ## Deployment
 

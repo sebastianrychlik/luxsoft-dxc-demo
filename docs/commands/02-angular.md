@@ -27,12 +27,24 @@ npm install
 
 ```bash
 cd frontend
+npm start
+```
+
+or equivalently:
+
+```bash
+cd frontend
 npx ng serve
 ```
 
 Application starts at: `http://localhost:4200`
 
 Hot module replacement is enabled by default.
+
+The Angular development proxy is enabled automatically.
+All requests to `/api/*` are forwarded to `http://localhost:8080`.
+
+> **Startup order:** start the backend (`mvn spring-boot:run`) before the frontend.
 
 ---
 
@@ -143,13 +155,35 @@ See `docs/development/milestones/M1.0-angular-foundation.md` for full architectu
 
 ---
 
+## Proxy configuration
+
+The Angular development server proxies `/api/*` to the Spring Boot backend.
+
+**File:** `frontend/proxy.conf.json`
+
+```json
+{
+  "/api": {
+    "target": "http://localhost:8080",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "info"
+  }
+}
+```
+
+The proxy is active for all `ng serve` / `npm start` runs (wired via `angular.json` `serve.options.proxyConfig`).
+
+---
+
 ## Environment configuration
 
 | File | Purpose |
 |---|---|
-| `src/environments/environment.ts` | Development config (local backend URL) |
-| `src/environments/environment.production.ts` | Production config (relative `/api` URL) |
+| `src/environments/environment.ts` | Development config — `apiBaseUrl: '/api'` (proxy forwards to backend) |
+| `src/environments/environment.production.ts` | Production config — `apiBaseUrl: '/api'` (same-origin deployment) |
 
+Both environments use the relative `/api` base URL.
 The Angular build system swaps environment files automatically based on `--configuration`.
 
 ---
