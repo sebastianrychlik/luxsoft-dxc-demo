@@ -6,19 +6,40 @@ Purpose-built technical interview demo showcasing end-to-end enterprise applicat
 
 ## Project Overview
 
-<!-- TODO: Describe the business context, goals, and scope of the demo application. -->
+Purpose-built technical interview demo showcasing end-to-end enterprise application development.
+
+The application implements an **Exchange Rate** service built with Angular, Spring Boot, PostgreSQL, Docker, and Google Cloud Run.
 
 ## Architecture
 
-<!-- TODO: Describe the high-level architecture (frontend, backend, database, cloud). Link to docs/architecture/. -->
+Three-tier enterprise architecture:
+
+- **Frontend** — Angular 18 SPA (standalone components, signals, lazy loading)
+- **Backend** — Spring Boot 3.x REST API
+- **Database** — PostgreSQL (future milestone)
+- **Infrastructure** — Docker Compose (local), Google Cloud Run (production)
 
 ## Technology Stack
 
-<!-- TODO: List the technologies used (Angular, Spring Boot, PostgreSQL, Docker, Cloud Run, etc.). -->
+| Layer | Technology |
+|---|---|
+| Frontend | Angular 18, TypeScript 5.4, RxJS 7.8 |
+| Backend | Java 21, Spring Boot 3.x, Maven |
+| Database | PostgreSQL (future milestone) |
+| Containerisation | Docker, Docker Compose |
+| Cloud | Google Cloud Run |
+| CI/CD | GitHub Actions (future milestone) |
 
 ## Folder Structure
 
-<!-- TODO: Document the top-level directory layout and the purpose of each folder. -->
+```
+luxsoft-dxc-demo/
+├── frontend/          # Angular 18 SPA
+├── backend/           # Spring Boot 3.x REST API
+├── docker/            # Docker Compose configuration
+├── scripts/           # Build, deploy and maintenance scripts
+└── docs/              # Architecture docs, ADRs, guides, milestones
+```
 
 ## Development
 
@@ -96,7 +117,51 @@ backend/
 │           └── LuxsoftDxcDemoApplicationTests.java
 └── pom.xml
 ```
-<!-- TODO: Describe how to set up and run the project locally (prerequisites, env vars, scripts). -->
+### Frontend
+
+#### Prerequisites
+
+| Tool | Version |
+|---|---|
+| Node.js | 20.x |
+| npm | 10.x |
+
+#### Install
+
+```bash
+cd frontend
+npm install
+```
+
+#### Run (development server)
+
+```bash
+cd frontend
+npx ng serve
+```
+
+Application starts at: `http://localhost:4200`
+
+#### Build
+
+```bash
+cd frontend
+npx ng build --configuration production
+```
+
+#### Project structure
+
+```
+frontend/src/app/
+├── core/           # Singleton infrastructure (ApiService, interceptors, guards)
+├── shared/         # Reusable UI components, pipes, directives
+├── features/       # Business feature modules (lazy-loaded)
+└── layouts/        # Application layout wrappers
+```
+
+See `docs/commands/02-angular.md` for full command reference.
+
+See `docs/development/milestones/M1.0-angular-foundation.md` for architecture details.
 
 ## Deployment
 
