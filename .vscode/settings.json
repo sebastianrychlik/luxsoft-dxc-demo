@@ -1,0 +1,85 @@
+{
+  // ==========================================================================
+  // .vscode/settings.json — luxsoft-dxc-demo
+  // Workspace settings for the full-stack enterprise project.
+  // ==========================================================================
+
+  // --------------------------------------------------------------------------
+  // Editor — General
+  // --------------------------------------------------------------------------
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": false,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.rulers": [100],
+  "editor.trimAutoWhitespace": true,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.eol": "\n",
+
+  // --------------------------------------------------------------------------
+  // Editor — Default Formatter
+  // --------------------------------------------------------------------------
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java",
+    "editor.tabSize": 4
+  },
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml",
+    "editor.tabSize": 4
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+    "editor.wordWrap": "on"
+  },
+
+  // --------------------------------------------------------------------------
+  // TypeScript / Angular
+  // --------------------------------------------------------------------------
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "eslint.validate": ["typescript", "html"],
+
+  // --------------------------------------------------------------------------
+  // Java / Spring Boot
+  // --------------------------------------------------------------------------
+  "java.compile.nullAnalysis.mode": "automatic",
+  "java.format.settings.url": ".vscode/java-formatter.xml",
+  "spring-boot.ls.java.home": "",
+
+  // --------------------------------------------------------------------------
+  // Files — Exclusions
+  // --------------------------------------------------------------------------
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/.angular": true,
+    "**/target": true,
+    "**/.git": false
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/.angular": true,
+    "**/target": true
+  },
+
+  // --------------------------------------------------------------------------
+  // Git
+  // --------------------------------------------------------------------------
+  "git.autofetch": true,
+  "gitlens.currentLine.enabled": true,
+
+  // --------------------------------------------------------------------------
+  // Docker
+  // --------------------------------------------------------------------------
+  "docker.defaultRegistryPath": "",
+
+  // --------------------------------------------------------------------------
+  // Terminal
+  // --------------------------------------------------------------------------
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "terminal.integrated.defaultProfile.osx": "bash"
+}
