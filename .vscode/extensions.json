@@ -1,0 +1,61 @@
+{
+  // ==========================================================================
+  // .vscode/extensions.json — luxsoft-dxc-demo
+  // Recommended enterprise extensions for the full-stack workspace.
+  // ==========================================================================
+  "recommendations": [
+    // ------------------------------------------------------------------------
+    // General / Editor
+    // ------------------------------------------------------------------------
+    "editorconfig.editorconfig",
+    "esbenp.prettier-vscode",
+    "streetsidesoftware.code-spell-checker",
+    "gruntfuggly.todo-tree",
+    "eamodio.gitlens",
+    "mhutchie.git-graph",
+
+    // ------------------------------------------------------------------------
+    // Angular / TypeScript / Frontend
+    // ------------------------------------------------------------------------
+    "angular.ng-template",
+    "ms-vscode.vscode-typescript-next",
+    "dbaeumer.vscode-eslint",
+    "nrwl.angular-console",
+
+    // ------------------------------------------------------------------------
+    // Java / Spring Boot / Backend
+    // ------------------------------------------------------------------------
+    "vscjava.vscode-java-pack",
+    "vscjava.vscode-spring-boot-dashboard",
+    "vmware.vscode-spring-boot",
+    "vscjava.vscode-maven",
+    "redhat.java",
+
+    // ------------------------------------------------------------------------
+    // Docker / Containers
+    // ------------------------------------------------------------------------
+    "ms-azuretools.vscode-docker",
+    "ms-vscode-remote.remote-containers",
+
+    // ------------------------------------------------------------------------
+    // REST / API Testing
+    // ------------------------------------------------------------------------
+    "humao.rest-client",
+
+    // ------------------------------------------------------------------------
+    // YAML / Configuration
+    // ------------------------------------------------------------------------
+    "redhat.vscode-yaml",
+
+    // ------------------------------------------------------------------------
+    // Markdown / Documentation
+    // ------------------------------------------------------------------------
+    "yzhang.markdown-all-in-one",
+    "davidanson.vscode-markdownlint",
+
+    // ------------------------------------------------------------------------
+    // Database
+    // ------------------------------------------------------------------------
+    "cweijan.vscode-database-client2"
+  ]
+}
