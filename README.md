@@ -22,6 +22,80 @@ Purpose-built technical interview demo showcasing end-to-end enterprise applicat
 
 ## Development
 
+### Backend
+
+#### Prerequisites
+
+| Tool | Version |
+|------|---------|
+| Java | 21 (Eclipse Temurin recommended) |
+| Maven | 3.9+ |
+
+#### Build
+
+```bash
+cd backend
+mvn clean package
+```
+
+#### Run
+
+```bash
+cd backend
+mvn spring-boot:run
+```
+
+The application starts on `http://localhost:8080` with the `local` profile active.
+
+#### Health endpoint
+
+```
+GET http://localhost:8080/api/health
+```
+
+Example response:
+
+```json
+{
+  "status": "UP",
+  "application": "luxsoft-dxc-demo",
+  "version": "0.1.0"
+}
+```
+
+Spring Boot Actuator is also available at:
+
+```
+GET http://localhost:8080/actuator/health
+```
+
+#### Project structure
+
+```
+backend/
+├── src/
+│   ├── main/
+│   │   ├── java/com/luxsoft/dxc/
+│   │   │   ├── LuxsoftDxcDemoApplication.java   # Application entry point
+│   │   │   ├── config/                           # Spring configuration classes
+│   │   │   ├── controller/                       # REST controllers
+│   │   │   ├── dto/                              # Data Transfer Objects
+│   │   │   ├── entity/                           # JPA entities (future)
+│   │   │   ├── exception/                        # Global exception handling
+│   │   │   ├── mapper/                           # MapStruct mappers (future)
+│   │   │   ├── model/                            # Domain model classes (future)
+│   │   │   ├── repository/                       # Spring Data repositories (future)
+│   │   │   ├── service/                          # Business logic services
+│   │   │   └── util/                             # Utility classes (future)
+│   │   └── resources/
+│   │       ├── application.yml                   # Base configuration
+│   │       ├── application-local.yml             # Local profile
+│   │       └── application-prod.yml              # Production profile
+│   └── test/
+│       └── java/com/luxsoft/dxc/
+│           └── LuxsoftDxcDemoApplicationTests.java
+└── pom.xml
+```
 <!-- TODO: Describe how to set up and run the project locally (prerequisites, env vars, scripts). -->
 
 ## Deployment
